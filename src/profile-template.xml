@@ -8,9 +8,9 @@
       <oscal-version>1.0.4</oscal-version>
    </metadata>
    
-   <import href="#ad005eae-cc63-4e64-9109-3905a9a825e4">
+   <import href="#0119451e-a426-4e25-b51d-2c11cece68b4">
       <include-controls>
-         <with-id>ac-1</with-id>
+         <with-id>control-1</with-id>
       </include-controls>
    </import>
    <merge>
@@ -18,23 +18,19 @@
       <as-is>true</as-is>
    </merge>
    <modify>
-
-      <alter control-id="ac-1">
-         <add position="starting" by-id="ac-1">
-            <prop ns="https://fedramp.gov/ns/oscal" name="CORE" value="true"/>
+      <alter control-id="control-1">
+         <add position="starting" by-id="control-1">
+            <prop ns="https://fedramp.gov/ns/oscal" name="response-point" value="true"/>
          </add>
       </alter>
    </modify>
    <back-matter>
-      <resource uuid="ee5abb91-9319-49b2-b695-c0358aa39282">
+      <resource uuid="0119451e-a426-4e25-b51d-2c11cece68b4">
          <title>NIST Special Publication (SP) 800-53</title>
          <prop name="version" value="Revision 4"/>
-         <rlink media-type="application/xml"
-                href="https://raw.githubusercontent.com/usnistgov/oscal-content/v1.0.0/nist.gov/SP800-53/rev4/xml/NIST_SP-800-53_rev4_catalog.xml"/>
-         <rlink media-type="application/oscal.catalog+json"
-                href="https://raw.githubusercontent.com/usnistgov/oscal-content/v1.0.0/nist.gov/SP800-53/rev4/json/NIST_SP-800-53_rev4_catalog.json"/>
-         <rlink media-type="application/oscal.catalog+yaml"
-                href="https://raw.githubusercontent.com/usnistgov/oscal-content/v1.0.0/nist.gov/SP800-53/rev4/yaml/NIST_SP-800-53_rev4_catalog.yaml"/>
+         <rlink media-type="application/xml"  href="catalog-template.xml"/>
+         <rlink media-type="application/json" href="catalog-template.json"/>
+         <rlink media-type="application/yaml" href="catalog-template.yaml"/>
       </resource>
    </back-matter>
 </profile>
