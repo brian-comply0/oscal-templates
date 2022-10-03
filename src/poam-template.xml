@@ -8,7 +8,7 @@
       <oscal-version>1.0.4</oscal-version>
    </metadata>
    
-   <import-ssp href="#7c30125f-c056-4888-9f1a-7ed1b6a1b638"/>
+   <import-ssp href="#262f54d6-5e32-4b79-8200-321ab5ecd768"/>
    <local-definitions>
       <component uuid="9d194268-a9d1-4c38-839f-9c4aa57bf71e" type="software">
          <title>XYZ Vulnerability Scanning Tool</title>
@@ -67,17 +67,8 @@
             <p>Delete it otherwise.</p>
          </remarks>
       </resource>
-      <resource uuid="7c30125f-c056-4888-9f1a-7ed1b6a1b638">
+      <resource uuid="262f54d6-5e32-4b79-8200-321ab5ecd768">
          <title>[System Name] [FIPS-199 Level] SSP</title>
-         <prop ns="https://fedramp.gov/ns/oscal"
-               name="type"
-               value="system-security-plan"/>
-         <prop ns="https://fedramp.gov/ns/oscal"
-               name="publication"
-               value="SSP Date"/>
-         <prop ns="https://fedramp.gov/ns/oscal"
-               name="version"
-               value="SSP Version"/>
          <rlink media-type="application/xml" href="ssp-template.xml"/>
          <rlink media-type="application/json" href="ssp-template.json"/>
          <rlink media-type="application/yaml" href="ssp-template.yaml"/>

@@ -17,7 +17,7 @@
       </responsible-party>
    </metadata>
    
-   <import-profile href="profile-template.xml"/>
+   <import-profile href="./profile-template.xml"/>
    <system-characteristics>
       <system-id identifier-type="https://ietf.org/rfc/rfc4122">fb8c67f9-6479-4d27-9711-b3f2eac8cd75</system-id>
       <system-name>System Name</system-name>
