@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessment-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0"  uuid="b04f1e41-7818-4413-ad20-32daccb28aa9">
+   <metadata>
+      <title>Assessment Plan Template</title>
+      <published>2022-09-19T12:00:00-04:00</published>
+      <last-modified>2022-09-19T12:00:00-04:00</last-modified>
+      <version>TEMPLATE</version>
+      <oscal-version>1.0.4</oscal-version>
+   </metadata>
+   
+   <import-ssp href="#75e00698-e43b-4d6f-be7f-d1227a3a3e39">
+      <remarks>
+         <p>Link the SAP to the SSP.</p>
+      </remarks>
+   </import-ssp>
+   <reviewed-controls>
+      <control-selection>
+         <description>
+            <h1>Control Scope</h1>
+         </description>
+         <include-all/>
+         <exclude-control control-id="ac-1"/>
+      </control-selection>
+   </reviewed-controls>
+
+   <back-matter>
+      <resource uuid="f56da5c6-da67-4c40-acc8-6814bf7aa374">
+         <title>System's Full Name</title>
+         <description>
+            <h1>USE THIS RESOURCE WHEN NO OSCAL-BASED SSP EXISTS</h1>
+            <p>Briefly describe the system. This will appear in the SAR.</p>
+         </description>
+         <prop name="type" value="no-oscal-ssp"/>
+         <prop ns="https://fedramp.gov/ns/oscal" name="import-profile" value="#890170c3-d4fa-4d25-ab96-8e4bf7cc237c"/>
+         <prop ns="https://fedramp.gov/ns/oscal" name="purpose" value="Briefly state the system's purpose. This will appear in the SAR."/>
+         <remarks>
+            <p>Only include this resource if no OSCAL-based SSP is available.</p>
+         </remarks>
+      </resource>
+      <resource uuid="75e00698-e43b-4d6f-be7f-d1227a3a3e39">
+         <title>[System Name] [FIPS-199 Level] SSP</title>
+         <prop name="type" value="system-security-plan"/>
+         <prop name="publication" value="SSP Date"/>
+         <prop name="version" value="SSP Version"/>
+         <rlink media-type="application/xml" href="./ssp-template.xml"/>
+         <rlink media-type="application/json" href="./ssp-template.json"/>
+         <remarks>
+            <p>Use this to point to an OSCAL-based SSP.</p>
+         </remarks>
+      </resource>
+   </back-matter>
+</assessment-plan>

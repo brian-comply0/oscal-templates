@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component-definition xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="a85ebdb8-2197-4ac7-acd2-da376ba9ac9f">
+   <metadata>
+      <title>Component Definition Template</title>
+      <published>2022-09-19T12:00:00-04:00</published>
+      <last-modified>2022-09-19T12:00:00-04:00</last-modified>
+      <version>TEMPLATE</version>
+      <oscal-version>1.0.4</oscal-version>
+   </metadata>
+   <component uuid="b036a6ac-6cff-4066-92bc-74ddfd9ad6fa" type="software">
+      <title>test component 1</title>
+      <description>
+         <p>This is a software component that implements basic authentication mechanisms.</p>
+      </description>
+      <responsible-role role-id="provider">
+         <party-uuid>ee47836c-877c-4007-bbf3-c9d9bd805a9a</party-uuid>
+      </responsible-role>
+      <control-implementation uuid="8df99ae3-6983-44b7-9782-ee704aea28f4" source="./catalog-template.xml">
+         <description>
+            <p>This is a partial implementation of the SP 800-53 rev4 catalog, focusing on the control enhancement AC-2 (3).</p>
+         </description>
+         <implemented-requirement uuid="095a8f32-0923-460b-9674-027ea2ea864b" control-id="control-1">
+            <description>
+               <p>Inactive accounts are automatically disabled based on the duration specified by the duration parameter. Disabled accounts are expected to be reviewed and removed when appropriate.</p>
+            </description>
+         </implemented-requirement>
+      </control-implementation>
+   </component>
+   <back-matter />
+</component-definition>

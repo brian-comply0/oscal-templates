@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plan-of-action-and-milestones xmlns="http://csrc.nist.gov/ns/oscal/1.0" uuid="06c3b989-3379-4fa5-ae2a-6f3a63e8d228">
+   <metadata>
+      <title>Plan of Action and Milestones (POA&amp;M) Template</title>
+      <published>2022-09-19T12:00:00-04:00</published>
+      <last-modified>2022-09-19T12:00:00-04:00</last-modified>
+      <version>TEMPLATE</version>
+      <oscal-version>1.0.4</oscal-version>
+   </metadata>
+   
+   <import-ssp href="#262f54d6-5e32-4b79-8200-321ab5ecd768"/>
+   <local-definitions>
+      <component uuid="9d194268-a9d1-4c38-839f-9c4aa57bf71e" type="software">
+         <title>XYZ Vulnerability Scanning Tool</title>
+         <description/>
+         <prop name="vendor" value="Vendor Name"/>
+         <prop name="name" value="Tool Name"/>
+         <prop name="version" value="1.2.3"/>
+         <status state="operational"/>
+         <remarks>
+            <p>This is a scanning tool referenced as a source by a POA&amp;M entry.</p>
+         </remarks>
+      </component>
+   </local-definitions>
+   <risk uuid="9cbd98f3-abcb-4948-ad06-14e0bcba742f">
+      <title>Weakness Name</title>
+      <description>
+         <p>Weakness Description</p>
+      </description>
+      <statement>
+         <p>Describe the risk</p>
+      </statement>
+      <prop ns="https://fedramp.gov/ns/oscal"
+            name="impacted-control-id"
+            value="ac-2"/>
+      <status>open</status>
+      <characterization>
+         <origin>
+            <actor type="party" actor-uuid="afe665d1-9021-4ad8-8bd2-c15b0f2dcf2d"/>
+            <actor type="tool" actor-uuid="9d194268-a9d1-4c38-839f-9c4aa57bf71e"/>
+         </origin>
+         <facet name="likelihood" system="https://fedramp.gov" value="high">
+            <prop name="state" value="initial"/>
+         </facet>
+      </characterization>
+   </risk>
+   <poam-item uuid="6F5FFF73-CAC6-4DA0-A0D9-0F931A5EFAFA">
+      <title>[EXAMPLE]POA&amp;M Item</title>
+      <description/>
+      <prop ns="https://fedramp.gov/ns/oscal" name="POAM-ID" value="V-1"/>
+      <related-observation observation-uuid="0aa54106-8a63-4953-ac0d-30ff91f8d4ab"/>
+      <associated-risk risk-uuid="9cbd98f3-abcb-4948-ad06-14e0bcba742f"/>
+      <remarks>
+         <p>The FedRAMP Extension, "POAM-ID" captures the traditional CSP-assigned unique POA&amp;M identifier.</p>
+         <p>The date-time-stamp identifies the date of discovery. FedRAMP is concerned with the date information. The time information is desirable and should be included where available. The time may be all zeros if unavailable.</p>
+      </remarks>
+   </poam-item>
+   <back-matter>
+      <resource uuid="a78f7e4c-a27a-4b1e-901b-ebfecf2b0301">
+         <title>System's Full Name</title>
+         <prop ns="https://fedramp.gov/ns/oscal" name="title-short" value="SFN"/>
+         <prop ns="https://fedramp.gov/ns/oscal" name="system-id"   value="FR00000000"/>
+         <prop ns="https://fedramp.gov/ns/oscal" name="import-profile" value="#fedramp-moderate-baseline"/>
+         <remarks>
+            <p>Include this resource if no OSCAL-based SSP is available, or if making a monthly
+               POA&amp;M deliverable without an attached OSCAL-based SSP.</p>
+            <p>Delete it otherwise.</p>
+         </remarks>
+      </resource>
+      <resource uuid="262f54d6-5e32-4b79-8200-321ab5ecd768">
+         <title>[System Name] [FIPS-199 Level] SSP</title>
+         <rlink media-type="application/xml" href="ssp-template.xml"/>
+         <rlink media-type="application/json" href="ssp-template.json"/>
+         <rlink media-type="application/yaml" href="ssp-template.yaml"/>
+         <remarks>
+            <p>Use this to point to an OSCAL-based SSP.</p>
+         </remarks>
+      </resource>
+   </back-matter>
+</plan-of-action-and-milestones>
